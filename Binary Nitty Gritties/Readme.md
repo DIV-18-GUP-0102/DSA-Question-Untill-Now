@@ -53,11 +53,11 @@ then add 1
 
 >Also the M.S.B. is the sign bit: 1 for negative and 0 for positive
 
-> When right shifting a -ive integer, 1s are put at the emptied places:
+When right shifting a -ive integer, 1s are put at the emptied places:
 
 (-6) >> 31 (to get the signed bit) = **(1111 1111 1111 1111 1111 1111 1111 1111)**
 
-> but for +ive integers, 0s are put at the emptied places as usual:
+but for +ive integers, 0s are put at the emptied places as usual:
 (6) >> 31 (to get the signed bit) = **(0000 0000 0000 0000 0000 0000 0000 0000)**
 
 
