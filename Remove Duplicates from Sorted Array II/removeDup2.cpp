@@ -4,7 +4,7 @@ using namespace std;
 class Solution
 {
 public:
-    void removeDup(vector<int> &vec)
+    int removeDup(vector<int> &vec)
     {
         int slow = 0;
 
@@ -23,7 +23,8 @@ public:
             }
         }
 
-        vec.resize(slow + 1);
+        // vec.resize(slow + 1);
+        return slow + 1;
     }
 };
 
@@ -32,31 +33,30 @@ int main()
     Solution s;
     vector<int> vec1 = {0, 0, 1, 1, 1, 1, 2, 3, 3};
     vector<int> vec2 = {1, 1, 1, 2, 2, 3};
-    vector<int> vec3 = {1, 1, 1};
+    vector<int> vec3 = {1, 1};
 
-    s.removeDup(vec1);
-    s.removeDup(vec2);
-    s.removeDup(vec3);
+    int a1 = s.removeDup(vec1);
+    int a2 = s.removeDup(vec2);
+    int a3 = s.removeDup(vec3);
 
-    // Output the modified vectors
     cout << "Modified vector 1: ";
-    for (int num : vec1)
+    for (int i = 0; i < a1; i++)
     {
-        cout << num << " ";
+        cout << vec1[i] << " ";
     }
     cout << endl;
 
     cout << "Modified vector 2: ";
-    for (int num : vec2)
+    for (int i = 0; i < a2; i++)
     {
-        cout << num << " ";
+        cout << vec2[i] << " ";
     }
     cout << endl;
 
-    cout << "Modified vector 1: ";
-    for (int num : vec3)
+    cout << "Modified vector 3: ";
+    for (int i = 0; i < a3; i++)
     {
-        cout << num << " ";
+        cout << vec3[i] << " ";
     }
     cout << endl;
 
