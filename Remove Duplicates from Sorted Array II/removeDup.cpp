@@ -10,7 +10,7 @@ public:
 
         for (int fast = 1; fast < vec.size(); fast++)
         {
-            if (vec[fast] != vec[slow])
+            if (vec[fast] != vec[slow]) // Add condition if (vec[fast] != vec[slow] || fast == vec.size() - 1) to prevent heap-buffer-overflow error
             {
                 vec[++slow] = vec[fast];
             }
@@ -62,3 +62,7 @@ int main()
 
     return 0;
 }
+
+/*
+A heap-buffer-overflow error occurs when the program is trying to read or write memory outside the bounds of a dynamically allocated heap buffer.
+*/
